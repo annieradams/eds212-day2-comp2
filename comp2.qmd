@@ -26,3 +26,14 @@ fxyz<- expression(2 * x * y + 3 * (x ^ 2) * (z ^ 3))
 dfdy= D(fxyz, 'y')
 dfdy
 ```
+
+## Penguins plot
+
+```{r}
+ggplot(data = penguins, aes(x= body_mass_g,
+                            y= flipper_length_mm, color= species))+
+  geom_point()+
+  labs(x= " Body Mass (grams)", y=" Flipper length (mm)",
+       title= " Palmer penguins body dimmensions")+
+  theme_dark()
+```
